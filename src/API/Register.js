@@ -9,33 +9,29 @@ async function Register(BASE_URL, formData) {
         firstName: formData.firstName,
         lastName: formData.lastName,
         email: formData.email,
-        password: formData.password
+        password: formData.password,
       }),
     });
 
-    // Backend will return the created user OR error
     const data = await response.json().catch(() => null);
 
     if (!response.ok) {
-      console.error("Registration failed:", data);
       return {
         success: false,
-        error: data?.message || "Registration failed"
+        message: data?.message || "Registration failed",
       };
     }
 
-    console.log("Registration successful:", data);
-
     return {
       success: true,
-      user: data
+      message: "Registration successful! Please sign in.",
+      user: data,
     };
 
   } catch (error) {
-    console.error("Error occurred while registering:", error);
     return {
       success: false,
-      error: error.message
+      message: "Network error — could not register",
     };
   }
 }
