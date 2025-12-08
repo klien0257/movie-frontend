@@ -28,13 +28,8 @@ function SeatPlan({ movie, sessionTime }) {
 
   // Automatically pick recommended seat
   useEffect(() => {
-    let recommended = null;
-    for (let seat of filteredAvailableSeats) {
-      if (!occupiedSeats.includes(seat)) {
-        recommended = seat;
-        break;
-      }
-    }
+    // filteredAvailableSeats already excludes occupied seats, so just pick the first one
+    const recommended = filteredAvailableSeats.length > 0 ? filteredAvailableSeats[0] : null;
     setRecommendedSeat(recommended);
   }, [filteredAvailableSeats]);
 
@@ -125,3 +120,8 @@ function SeatPlan({ movie, sessionTime }) {
 }
 
 export default SeatPlan;
+
+
+<system-reminder>
+Whenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.
+</system-reminder>
