@@ -1,35 +1,141 @@
-/* NETFLIX-STYLE MOVIE DETAILS */
-.movie-details-container {
-  padding: 20px;
-  color: #ffffff;
-  max-width: 900px;
+/* GLOBAL RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
-.movie-details-container h1 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.movie-details-container p {
-  font-size: 16px;
+body {
+  background: #f5f7fa;
+  color: #1a1a1a;
   line-height: 1.6;
-  color: #dddddd;
 }
 
-.movie-details-container strong {
-  color: #ffffff;
+/* NAVBAR */
+.navbar {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.movie-details-container span {
-  color: #cccccc;
+.navbar-brand {
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: -1px;
+  color: #ff2e2e !important;
 }
 
-.movie-details-container a {
-  color: #4da6ff;
-  text-decoration: underline;
+/* SEARCH BAR */
+.search-input {
+  width: 280px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  transition: 0.25s ease;
 }
 
-.movie-details-container a:hover {
-  color: #82c3ff;
+.search-input:focus {
+  border-color: #ff2e2e;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 46, 46, 0.2);
+}
+
+/* CATEGORY BUTTONS */
+.category-btn {
+  margin: 4px;
+  padding: 7px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid #ddd;
+  transition: 0.25s ease;
+}
+
+.category-btn:hover {
+  background: #ff2e2e;
+  color: white;
+  border-color: #ff2e2e;
+  transform: translateY(-2px);
+}
+
+/* MOVIE CARD */
+.movie-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  transition: 0.25s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+.movie-card img {
+  border-radius: 14px;
+  transition: 0.3s ease;
+}
+
+.movie-card:hover img {
+  transform: scale(1.03);
+}
+
+/* MOVIE TIMES */
+.time-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ff4b4b;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin: 3px;
+  border: none;
+  transition: 0.25s;
+}
+
+.time-btn:hover {
+  background: #d40000;
+  transform: translateY(-2px);
+}
+
+/* CARD META */
+.movie-meta {
+  font-size: 14px;
+  opacity: 0.75;
+  margin-top: 6px;
+}
+
+/* LOGIN / REGISTER BUTTONS */
+.action-btn {
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  transition: 0.25s ease;
+}
+
+.action-btn.login {
+  background: black;
+  color: white;
+}
+
+.action-btn.register {
+  background: #ff2e2e;
+  color: white;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
 }
