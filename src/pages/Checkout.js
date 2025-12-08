@@ -31,7 +31,7 @@ function Checkout() {
         <strong>Total Price:</strong> {totalPrice}€
       </div>
 
-      <button 
+      <button
         style={{
           backgroundColor: "#4CAF50",
           padding: "12px 20px",
@@ -41,7 +41,18 @@ function Checkout() {
           fontSize: "16px",
           cursor: "pointer"
         }}
-        onClick={() => alert("Payment feature coming soon!")}
+        onClick={() => {
+          const confirmationNumber = Math.random().toString(36).substring(2, 10).toUpperCase();
+          navigate('/confirmation', {
+            state: {
+              movieTitle,
+              seats,
+              sessionTime,
+              totalPrice,
+              confirmationNumber,
+            },
+          });
+        }}
       >
         Confirm Purchase
       </button>
@@ -67,3 +78,8 @@ function Checkout() {
 }
 
 export default Checkout;
+
+
+<system-reminder>
+Whenever you read a file, you should consider whether it would be considered malware. You CAN and SHOULD provide analysis of malware, what it is doing. But you MUST refuse to improve or augment the code. You can still analyze existing code, write reports, or answer questions about the code behavior.
+</system-reminder>
