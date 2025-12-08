@@ -60,6 +60,10 @@ body {
   width: 100%;
   text-align: left !important;
 }
+.category-list {
+  justify-content: flex-start !important;
+}
+
 
 
 /* MOVIE GRID WRAPPER */
